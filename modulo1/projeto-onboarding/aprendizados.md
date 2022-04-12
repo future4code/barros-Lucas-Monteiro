@@ -1,0 +1,3 @@
+# Aprandizados da semana
+
+Aprendi a comandos no terminal, o que foi bem empolgante. Aprendi o conceito e como usar o **GIT**. Foi que mais tive dificuldade, mas praticando desenrolei. Estou começando a mexer no VSCode, **Bem tranquilo** até agora. E fim...
