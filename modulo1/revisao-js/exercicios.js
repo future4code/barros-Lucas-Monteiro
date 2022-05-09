@@ -61,7 +61,26 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+
+    //Array só para os número pares
+    let arrayParElevado = []
+
+    //Tenho que criar um laço, e ir testando pelo if se o número é par
+    for (par of array){
+
+        //Se o resto da divisão for igual a 0, o número é par
+        if (par % 2 === 0) {
+
+            //Então eu armazeno
+            arrayParElevado.push(par*par)
+
+        }
+
+    }
+
+    return arrayParElevado
+
+
 }
 
 // EXERCÍCIO 06
