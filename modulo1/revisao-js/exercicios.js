@@ -109,11 +109,73 @@ function retornaMaiorNumero(array) {
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
 
+    //Criar o objeto, já para deixar pronto
+    let numeros = {
+        maiorNumero: 0,
+        maiorDivisivelPorMenor: false,
+        diferenca: 0
+    }
+
+    //Faço um if para ver se o número 1 é maior que o 2 se for
+    if (num1>num2){
+
+        //Armazeno o número 1 no atributo de mairo número
+        numeros.maiorNumero = num1
+        //Faço a diferença entre eles
+        numeros.diferenca = num1-num2
+        
+        //E vejo se ele é divisível pelo outro  
+        if (num1%num2 === 0){
+
+            //Se for, digo que é
+            numeros.maiorDivisivelPorMenor = true
+        }else{
+
+            //Se não armazeno false
+            numeros.maiorDivisivelPorMenor = false
+        }        
+
+    }else{ //Caso o núemro dois seja maior
+
+        /*Armazeno o número 2 no atributo de mairo número
+        E faço tada a lógica que fiz com o número 1 só 
+        que substituindo por 2*/
+        numeros.maiorNumero = num2
+        numeros.diferenca = num2-num1
+
+        if (num2%num1 === 0){
+
+            numeros.maiorDivisivelPorMenor = true
+        }else{
+
+            numeros.maiorDivisivelPorMenor = false
+        }
+    }
+
+    return numeros
+
 }
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
    
+    //Crio uma array para armazenar os números pares
+    let arrayPares = []
+    //Uma variável para realizar a minha condição de loop
+    let condicao = 0
+
+    while (condicao < n) {
+
+        /*Vou colocando no array o número*2 para ir listando os pares
+        pela quantidade que foi digitada*/
+        arrayPares.push(condicao*2)
+        
+        //Para não ficar no loop eterno
+        condicao++
+    }
+
+    return arrayPares
+
 }
 
 // EXERCÍCIO 09
