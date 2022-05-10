@@ -62,7 +62,7 @@ function retornaNumerosPares(array) {
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
 
-    //Array só para os número pares
+    //Array só para os número pares que será elevados
     let arrayParElevado = []
 
     //Tenho que criar um laço, e ir testando pelo if se o número é par
@@ -71,7 +71,7 @@ function retornaNumerosParesElevadosADois(array) {
         //Se o resto da divisão for igual a 0, o número é par
         if (par % 2 === 0) {
 
-            //Então eu armazeno
+            //Então eu armazeno o número elevado a 2.
             arrayParElevado.push(par*par)
 
         }
@@ -85,7 +85,25 @@ function retornaNumerosParesElevadosADois(array) {
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
+
+    //Variável para armazenar o maior número
+    let maiorNumero = 0
+
+    //um laço para andar pela Array
+    for (maior of array){
+
+        /*Se o número da posição do array for maior que o número
+        armazenado na variável*/
+        if (maior > maiorNumero){
+            //Eu armazeno o número
+            maiorNumero = maior
+
+        }
+
+    }
   
+    return maiorNumero
+
 }
 
 // EXERCÍCIO 07
