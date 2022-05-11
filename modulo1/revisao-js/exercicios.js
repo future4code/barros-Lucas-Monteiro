@@ -33,6 +33,13 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
+
+    //Ordeno a array em ordem crecente 
+    array.sort(function (a, b){
+        return a - b
+    })
+
+    return array
   
 }
 
