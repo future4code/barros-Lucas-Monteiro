@@ -34,7 +34,8 @@ function retornaArrayInvertido(array) {
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
 
-    //Ordeno a array em ordem crecente 
+    /*Ordeno a array em ordem crecente com a função sorte
+    e uso um callback onde compara os dois números para reorganizar corretamente*/
     array.sort(function (a, b){
         return a - b
     })
@@ -209,7 +210,8 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
   
-    //Ordeno a array em ordem crecente 
+    /*Ordeno a array em ordem crecente com a função sorte
+    e uso um callback onde compara os dois números para reorganizar corretamente*/ 
     array.sort(function (a, b){
         return a - b
     })
@@ -336,6 +338,20 @@ function retornaContasComSaldoAtualizado(contas) {
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
   
+    //Uso o sort.() para ordenar em ordem alfabética
+    consultas.sort((nome1, nome2)=>{
+        
+        //Deixo as letras iguais para comparação [Pode dar erro]
+        let a = nome1.nome.toUpperCase()
+        let b = nome2.nome.toUpperCase()
+
+        //Achei essa função que compara por ordem alfabética considerando caracteres especiais 
+        return a.localeCompare(b)
+
+    })
+
+    return consultas
+
 }
 
 // EXERCÍCIO 15B
