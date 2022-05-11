@@ -181,25 +181,98 @@ function retornaNPrimeirosPares(n) {
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
 
+    //Comparo se todos os lados são iguais
+    if(ladoA === ladoB && ladoB === ladoC){
+
+        return "Equilátero"
+
+    //Compara se dois lados são iguais
+    }else if (ladoA === ladoB || ladoB === ladoC || ladoA === ladoC){
+
+        return "Isósceles"
+
+    //Caso nenhuma condição acima tenha validade sobra o escaleno
+    }else{
+
+        return "Escaleno"
+    }
+
 }
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
   
+    //Ordeno a array em ordem crecente 
+    array.sort(function (a, b){
+        return a - b
+    })
+
+    //Vou precisar de uma nova array para armazenar os valores
+    let novoArray = []
+
+    //Armazeno o penúltimo valor da minha array para o segundo maior valor
+    novoArray.push(array[array.length-2])
+    //Armazeno o segundo valor da array para o segundo menor número
+    novoArray.push(array[1])
+    
+    return novoArray
+
 }
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
+
+    //Saída
+    /*"Venha assistir ao filme O Diabo Veste Prada, de 2006, dirigido por David Frankel 
+    e estrelado por Meryl Streep, Anne Hathaway, Emily Blunt, Stanley Tucci."*/
    
+    //Comecei a chamada e salvei
+    let inicioCahamda = `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por `
+
+    /*Fiz um laço para a array, pois para ter a saída desejada, preciso
+    que o ultimo ator venha seguido de um ponto*/
+    for (let contador = 0; contador < filme.atores.length; contador++){
+
+        let ultimoAtor = filme.atores.length - 1
+
+        //Vou adicionando até o penúltimo ator
+        if (contador !== ultimoAtor){
+            
+            //Adiciono ator por ator com uma vírgula e espaço separando eles.
+            inicioCahamda = inicioCahamda + filme.atores[contador] + ", "
+        }else {
+
+            //No último eu acrescento um zero
+            inicioCahamda = inicioCahamda + filme.atores[contador] + "."
+        }
+    }
+
+    return inicioCahamda
+
 }
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
    
+    let anonimo = {
+        ... pessoa,
+        nome: "ANÔNIMO"
+    }
+
+    return anonimo
+
 }
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
+
+    //Atributos do objeto: nome idade altura
+    /*Para entrar na montanha russa do terro
+    - Ter, no mínimo, 1.5m de altura;
+    - Ser mais velho do que 14 anos e
+    - Ser mais novo do que 60 anos. */
+
+    
    
 }
 
