@@ -279,8 +279,10 @@ function retornaPessoasAutorizadas(pessoas) {
     - Ser mais velho do que 14 anos e
     - Ser mais novo do que 60 anos. */
 
+    //Faço um filter para verificar quais as pessoas autorizadas
     const pessoasAutorizadas = pessoas.filter((pessoa, index, array)=>{
 
+        //retorno um array com as características válidas para entrar na montanha russa
         return pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60
     })
 
@@ -291,9 +293,11 @@ function retornaPessoasAutorizadas(pessoas) {
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
 
+    //Faço um filter para ferificar quais as pessoas não estão autorizadas
     const pessoasNaoAutorizadas = pessoas.filter((pessoa, index, array)=>{
 
-            return pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade > 60
+        //Vejo se alguma das características não se encaixam para entrar
+        return pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade > 60
        
     })
 
@@ -303,6 +307,29 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
+
+    //Crio uma variável para somar as compras
+    let somaSaldo = 0
+
+    //Crio um laço para correr a array principal 
+    for (conta of contas){
+
+        //Crio outro laço para corrar a array dos valores das compras
+        for (somarCompras of conta.compras){
+
+            //Faço a soma dos valores e guardo
+            somaSaldo += somarCompras
+        }
+
+        //Realizo a subtração do saldo pelo valor das compras
+        conta.saldoTotal = conta.saldoTotal - somaSaldo
+        //Zero o valor de somar os saldos ,para não influenciar no próximo loop [IMPORTANTE]
+        somaSaldo = 0
+        //Zero as compras do cliente
+        conta.compras = []
+    }
+
+    return contas
 
 }
 
