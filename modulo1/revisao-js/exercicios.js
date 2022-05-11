@@ -279,13 +279,26 @@ function retornaPessoasAutorizadas(pessoas) {
     - Ser mais velho do que 14 anos e
     - Ser mais novo do que 60 anos. */
 
-    
+    const pessoasAutorizadas = pessoas.filter((pessoa, index, array)=>{
+
+        return pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60
+    })
+
+    return pessoasAutorizadas
    
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
+
+    const pessoasNaoAutorizadas = pessoas.filter((pessoa, index, array)=>{
+
+            return pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade > 60
+       
+    })
+
+    return pessoasNaoAutorizadas
+
 }
 
 // EXERCÍCIO 14
