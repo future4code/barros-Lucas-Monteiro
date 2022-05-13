@@ -152,10 +152,10 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
         numeros.diferenca = num2-num1
 
         if (num2%num1 === 0){
-
+            //Se o resto for igaul a zero, armazeno true
             numeros.maiorDivisivelPorMenor = true
         }else{
-
+            //Caso contrário false
             numeros.maiorDivisivelPorMenor = false
         }
     }
@@ -263,6 +263,8 @@ function retornaChamadaDeFilme(filme) {
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
    
+    /*Aqui é só usar o espalhamento do objeto principal no novo objeto
+    E depois alterar o atributo nome*/
     let anonimo = {
         ... pessoa,
         nome: "ANÔNIMO"
@@ -341,7 +343,7 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
     //Uso o sort.() para ordenar em ordem alfabética
     consultas.sort((nome1, nome2)=>{
         
-        //Deixo as letras iguais para comparação [Pode dar erro]
+        //Deixo as letras iguais para comparação [Pode dar erro] como digo qual atributo irei cinsiderar
         let a = nome1.nome.toUpperCase()
         let b = nome2.nome.toUpperCase()
 
@@ -357,6 +359,34 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
 
+    //Uso o sort.() para ordenar em ordem das datas
+    consultas.sort((nome1, nome2)=>{
+        
+        //Dica de terça, usar o split para separa a string, uso a / como condição
+        let separador1 = nome1.dataDaConsulta.split("/")
+        let separador2 = nome2.dataDaConsulta.split("/")
+        //P.S.: Me retorna uma array
+
+        //Armazeno o mês para comparar
+        let mes1 = separador1[1]
+        let mes2 = separador2[1]
+
+        //Armazeno o dia para comparar
+        let dia1 = separador1[0]
+        let dia2 = separador2[0]
+
+        //Achei essa função que compara por ordem
+        //Caso o mês comparado for igual  
+        if (mes1 === mes2){
+            //Eu ordeno por dia
+            return dia1.localeCompare(dia2) 
+        }else {
+            //Se os mês for diferente ordeno pelo mês
+            return mes1.localeCompare(mes2)
+        }
+    })
+
+    return consultas
     
    
 }
