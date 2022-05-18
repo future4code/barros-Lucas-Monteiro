@@ -33,6 +33,14 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
+
+    /*Ordeno a array em ordem crecente com a função sorte
+    e uso um callback onde compara os dois números para reorganizar corretamente*/
+    array.sort(function (a, b){
+        return a - b
+    })
+
+    return array
   
 }
 
@@ -144,10 +152,10 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
         numeros.diferenca = num2-num1
 
         if (num2%num1 === 0){
-
+            //Se o resto for igaul a zero, armazeno true
             numeros.maiorDivisivelPorMenor = true
         }else{
-
+            //Caso contrário false
             numeros.maiorDivisivelPorMenor = false
         }
     }
@@ -202,7 +210,8 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
   
-    //Ordeno a array em ordem crecente 
+    /*Ordeno a array em ordem crecente com a função sorte
+    e uso um callback onde compara os dois números para reorganizar corretamente*/ 
     array.sort(function (a, b){
         return a - b
     })
@@ -254,6 +263,8 @@ function retornaChamadaDeFilme(filme) {
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
    
+    /*Aqui é só usar o espalhamento do objeto principal no novo objeto
+    E depois alterar o atributo nome*/
     let anonimo = {
         ... pessoa,
         nome: "ANÔNIMO"
@@ -272,26 +283,110 @@ function retornaPessoasAutorizadas(pessoas) {
     - Ser mais velho do que 14 anos e
     - Ser mais novo do que 60 anos. */
 
-    
+    //Faço um filter para verificar quais as pessoas autorizadas
+    const pessoasAutorizadas = pessoas.filter((pessoa, index, array)=>{
+
+        //retorno um array com as características válidas para entrar na montanha russa
+        return pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60
+    })
+
+    return pessoasAutorizadas
    
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
+
+    //Faço um filter para ferificar quais as pessoas não estão autorizadas
+    const pessoasNaoAutorizadas = pessoas.filter((pessoa, index, array)=>{
+
+        //Vejo se alguma das características não se encaixam para entrar
+        return pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade > 60
+       
+    })
+
+    return pessoasNaoAutorizadas
+
 }
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
+
+    //Crio uma variável para somar as compras
+    let somaSaldo = 0
+
+    //Crio um laço para correr a array principal 
+    for (conta of contas){
+
+        //Crio outro laço para corrar a array dos valores das compras
+        for (somarCompras of conta.compras){
+
+            //Faço a soma dos valores e guardo
+            somaSaldo += somarCompras
+        }
+
+        //Realizo a subtração do saldo pelo valor das compras
+        conta.saldoTotal = conta.saldoTotal - somaSaldo
+        //Zero o valor de somar os saldos ,para não influenciar no próximo loop [IMPORTANTE]
+        somaSaldo = 0
+        //Zero as compras do cliente
+        conta.compras = []
+    }
+
+    return contas
 
 }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
   
+    //Uso o sort.() para ordenar em ordem alfabética
+    consultas.sort((nome1, nome2)=>{
+        
+        //Deixo as letras iguais para comparação [Pode dar erro] como digo qual atributo irei cinsiderar
+        let a = nome1.nome.toUpperCase()
+        let b = nome2.nome.toUpperCase()
+
+        //Achei essa função que compara por ordem alfabética considerando caracteres especiais 
+        return a.localeCompare(b)
+
+    })
+
+    return consultas
+
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
+
+    //Uso o sort.() para ordenar em ordem das datas
+    consultas.sort((nome1, nome2)=>{
+        
+        //Dica de terça, usar o split para separa a string, uso a / como condição
+        let separador1 = nome1.dataDaConsulta.split("/")
+        let separador2 = nome2.dataDaConsulta.split("/")
+        //P.S.: Me retorna uma array
+
+        //Armazeno o mês para comparar
+        let mes1 = separador1[1]
+        let mes2 = separador2[1]
+
+        //Armazeno o dia para comparar
+        let dia1 = separador1[0]
+        let dia2 = separador2[0]
+
+        //Achei essa função que compara por ordem
+        //Caso o mês comparado for igual  
+        if (mes1 === mes2){
+            //Eu ordeno por dia
+            return dia1.localeCompare(dia2) 
+        }else {
+            //Se os mês for diferente ordeno pelo mês
+            return mes1.localeCompare(mes2)
+        }
+    })
+
+    return consultas
+    
    
 }
