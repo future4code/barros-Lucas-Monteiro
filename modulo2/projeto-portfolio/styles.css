@@ -10,8 +10,10 @@ body{
 header{
     margin-top: 50px;
     margin: auto;
-    width: 800px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    background-color : #F5FFFA;
 }
 
 /*Só o título*/
@@ -29,8 +31,10 @@ header{
     border: none; 
     border-radius: 10px;
     padding-top: 5px; 
+    margin: auto;
     font-family: Georgia, serif; 
     font-size: 20px; 
+    width: 800px;
     color: #E0FFFF; 
 }
 
@@ -76,6 +80,7 @@ main{
     font-size: 17px;
     color: #2F4F4F;
     background-color: #E1EFEF;
+    text-align: justify;
 }
 
 
@@ -107,7 +112,6 @@ footer{
 
 /*minha foto*/
 .foto-perfil{
-    border-radius: 35px;
     border: none;
     padding-top: 4px;
     padding-left: 3px;
@@ -124,7 +128,6 @@ footer{
     width: 580px;
     height:215px;
     font-size: 19px;
-    text-align: justify;
 }
 
 /*Deixar foto e texto lado a lado*/
@@ -138,13 +141,26 @@ footer{
     text-align: center;
 }
 
+/*div dos projetos*/
 #projetos{
     text-align: center;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-bottom: 5%;
     height: 200px;
 }
 
+#projetos1{
+    text-align: center;
+}
+
+.imagens-projetos{
+    width: 430px;
+    height: 380px;
+    border: none;
+    border-radius: 10px;
+}
+
+/*Imagens de link dos projetos*/
 .link-projeto{
     width: 120px;
     height: 120px;
