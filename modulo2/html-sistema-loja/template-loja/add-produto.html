@@ -5,44 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adicionar Produto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <p>Livraria Lucas</p>
+        <h1 id="titulo">Livraria Lucas!</h1>
+        <p>Bem-vind@ a sua nova aventura literária</p>
     </header>
     
-    <nav>
+    <nav id="menu">
         <a href="index.html">Página Inicial</a>
         <a href="ctrl-estoque.html">Controle de Estoque</a>
         <a href="">Adicionar Produto</a>
         <a href="funcionarios.html">Funcionários</a>
     </nav>
 
-    
-    <h2>Adicionar Produto</h2>
-    <form action="">
-            <label for="link-foto">Link para foto: </label>
-            <input type="url" id="link-foto" name="link-foto">
-            <br>
-     
-            <label for="descricao">Descrição do produto: </label>
-            <!-- Adicione o id apropriado para o input abaixo -->
-            <input type="text" id="descricao" name="descrição">
-            <br>
-            <label for="preco">Preço (em R$): </label>
-            <!-- Adicione o id apropriado e o type para receber números abaixo -->
-            <input type="number" step="0.01" id="preco" name="preço">
-            <br>
+    <main>
+        <h2>Adicionar Produto</h2>
+        <form action="">
+                <label for="link-foto">Link para foto: </label>
+                <input type="url" id="link-foto" name="link-foto">
+                <br>
+        
+                <label for="descricao">Descrição do produto: </label>
+                <!-- Adicione o id apropriado para o input abaixo -->
+                <input type="text" id="descricao" name="descrição">
+                <br>
+                <label for="preco">Preço (em R$): </label>
+                <!-- Adicione o id apropriado e o type para receber números abaixo -->
+                <input type="number" step="0.01" id="preco" name="preço">
+                <br>
 
-            <!-- Preencha as propriedades necessárias para os elementos abaixo -->
-            <label for="quantidade-disponivel">Quantidade disponível: </label>
-            <input type ="number" id="quantidade-disponivel" name="quantidade-disponivel">
+                <!-- Preencha as propriedades necessárias para os elementos abaixo -->
+                <label for="quantidade-disponivel">Quantidade disponível: </label>
+                <input type ="number" id="quantidade-disponivel" name="quantidade-disponivel">
 
-            <br>
-            <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-            <button type="submit" value="adicionar">Adicionar</button>
+                <br>
+                <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
+                <button type="submit" value="adicionar">Adicionar</button>
 
-    </form>
+        </form>
+    </main>
+
+    <footer id="rodape">
+        <p>Siga-nos nas redes sociais!</p>
+        <img src="img/facebook.png" alt="facebook"/>
+        <img src="img/instagram.png" alt="instagram"/>
+        <img src="img/linkedin.png" alt="linkedin"/>
+    </footer>
 
 </body>
 </html>
