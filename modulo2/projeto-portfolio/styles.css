@@ -1,0 +1,157 @@
+/*<<<Estilos padrões das páginas>>>*/
+
+/*Corpo*/
+body{
+    background-color : #F5FFFA;
+}
+
+/*-----Cabeçalho-----*/
+/*geral*/
+header{
+    margin-top: 50px;
+    margin: auto;
+    width: 800px;
+    text-align: center;
+}
+
+/*Só o título*/
+#titulo{
+    font-family: Georgia, serif;
+    color: #283847;
+    font-size: 35px;
+}
+
+/***barra menu***/
+/*geral*/
+#menu{ 
+    background-color: #283847; 
+    height: 30px; 
+    border: none; 
+    border-radius: 10px;
+    padding-top: 5px; 
+    font-family: Georgia, serif; 
+    font-size: 20px; 
+    color: #E0FFFF; 
+}
+
+/*Link sem ser visitado*/
+.link-menu:link{
+    color: #E0FFFF;
+    text-decoration: none;
+}
+
+/*Link visitado*/
+.link-menu:visited {
+    color: #E0FFFF;
+    text-decoration: none;
+}
+
+/*Link quando o mouse está por cima*/
+.link-menu:hover {
+    text-decoration: none;
+    background-color: #E0FFFF;
+    color:#283847;
+    opacity: 0.5;
+}
+
+/*Link quando clica*/
+.link-menu:active {
+    text-decoration: none;
+}
+
+/*-----Conteúdo-----*/
+/*Geral*/
+main{
+    width: 800px;
+    margin: auto;
+}
+
+/*Espaço dos conteúdos*/
+.conteudo{
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 1%;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    color: #2F4F4F;
+    background-color: #E1EFEF;
+}
+
+
+/*-----Rodapé-----*/
+/*geral*/
+footer{
+    width: 800px;
+    margin: auto;
+    background-color: #283847;
+    border-top: double 7px;
+    border-color: #E1EFEF;
+    border-radius: 10px;
+    margin-top: 7px;
+    color: #E0FFFF; 
+    padding-bottom: 5px;
+    padding-left: 9px;
+    font-family: Georgia, serif; 
+    font-size: 17px; 
+}
+
+/*Imagens das redes sociais*/
+.logo-link{
+    height: 35px;
+    width: 35px;
+    margin-right: 6px;
+}
+
+/*<<<Estilos específicos das páginas>>>*/
+
+/*minha foto*/
+.foto-perfil{
+    border-radius: 35px;
+    border: none;
+    padding-top: 4px;
+    padding-left: 3px;
+    width: 215px;
+    height: 200px;
+}
+
+/*Texto sobre mim*/
+#sobre-mim{
+    border-radius: 10px;
+    border: none;
+    padding-left: 3px;
+    margin-left: 5px;
+    width: 580px;
+    height:215px;
+    font-size: 19px;
+    text-align: justify;
+}
+
+/*Deixar foto e texto lado a lado*/
+#lado-lado{
+    display : flex;
+    flex-direction: row;
+}
+
+/*Deixar a lista no centro*/
+#instituicao{
+    text-align: center;
+}
+
+#projetos{
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    height: 200px;
+}
+
+.link-projeto{
+    width: 120px;
+    height: 120px;
+    margin-right: 7%;   
+}
+
+.link-projeto:hover{
+    width: 150px;
+    height: 150px;
+}

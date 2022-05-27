@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato-Lucas Monteiro</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+     <!--Cabeçalho-->
+     <header>
+        <!--Título da página-->
+        <h1 id="titulo">Portfólio - Lucas Monteiro</h1>
+
+        <!--Menu do portfólio-->
+        <nav id="menu">
+            <a href="index.html" class="link-menu">Sobre mim</a>
+            <span>  |  </span>
+            <a href="projetos.html" class="link-menu">Galeria de projetos</a>
+            <span>  |  </span>
+            <a href="contato.html" class="link-menu">Entre em contato</a>
+        </nav>
+    </header>
+
+    <!--Conteúdo da página-->
+    <main>
+
+        <!--Formuçário para contato-->
+        <div class="conteudo">
+            <form action="">
+                <fieldset>
+                    <legend>Deixe sua mensagem ;)</legend>
+                    
+                    <label for="assunto">Qual o assunto da menagem?</label>
+                    <select name="assunto" id="assunto">
+                        <option value="sem-assunto" selected>Escolha o assunto</option>
+                        <option value="primeiro-contato">Primeiro Contato</option>  
+                        <option value="critica">Críticas Construtivas</option>  
+                        <option value="parcerias">Parcerias</option>
+                        <option value="orcamento">Orçamento</option>  
+                    </select><br>
+
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" name="nome" id="nome"><br>
+
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" name="email" id="email"> <br>
+
+                    <label for="menagem">Digite seu texto:</label><br>
+                    <textarea name="mensagem" id="mensagem" cols="50" rows="9"></textarea><br>
+
+                    <input type="submit" value="Enviar">
+                
+                </fieldset>
+            </form>
+        </div>
+
+    </main>
+
+    <!--Rodapé-->
+    <footer>
+        <!--Redes sociais para contato-->
+        <p>Minhas redes sociais para contatos:</p>
+        <a href="mailto:contato.lucasmonteiro@gmail.com">
+            <img class = "logo-link" src="img/email.png" alt="Link para o email do Lucas Monteiro">
+        </a>
+        <a href="https://github.com/lucasmsmonteiro">
+            <img class= "logo-link" src="img/github.png" alt="Link para o github de Lucas Monteiro">
+        </a>
+        <a href="https://www.linkedin.com/in/lucasmonteiro631996/">
+            <img class= "logo-link" src="img/linkedin.png" alt="Link para o linkedin de Lucas Monteiro">
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=5581984726414&text&app_absent=0">
+            <img class= "logo-link" src="img/whatsapp.png" alt="Link para o whatsapp de Lucas Monteiro">
+        </a>
+        <a href="https://www.instagram.com/lucasmsmonteiro/">
+            <img class= "logo-link" src="img/instagram.png" alt="Link para o Instagram de Lucas Monteiro">
+        </a>
+    </footer>
+    
+</body>
+</html>
