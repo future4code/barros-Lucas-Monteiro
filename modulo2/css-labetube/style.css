@@ -10,7 +10,6 @@
     grid-template-areas: 'head'
                         'main'
                         'foot';
-    height: 100vh;
 }
 
 header{
@@ -18,23 +17,39 @@ header{
     background-color: #e78038;
 }
 
-main{
+#videos-inicio{
     grid-area: main;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-columns: 300px 300px 300px 300px;
     grid-template-areas:'item1 item2 item3 item4'
                         'item5 item6 item7 item8';
     justify-items: center;
+    gap: 10px;
+    padding-left: 4%;
 }
 
 footer{
     grid-area: foot;
     background-color: #323b3e;
+    color: white;
+    text-align: center;
+    padding: 2%;
 }
 
 .itens{
-    background-color: blue;
+    margin-top: 7px;
+    border: solid green 1px;
+}
+
+img{
+    width: 300px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+p{
+    margin-left: 7px;
 }
 
 #item-1{
@@ -67,4 +82,15 @@ footer{
 
 #item-8{
     grid-area: item8;
+}
+
+.video-pagina{
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+video{
+    width: 80%;
+    height: 80%;
+    margin-top: 6px;
 }
