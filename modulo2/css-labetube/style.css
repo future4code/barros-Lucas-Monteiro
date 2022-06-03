@@ -1,0 +1,70 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.pagina-home{
+    display: grid;
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'head'
+                        'main'
+                        'foot';
+    height: 100vh;
+}
+
+header{
+    grid-area: head;
+    background-color: #e78038;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:'item1 item2 item3 item4'
+                        'item5 item6 item7 item8';
+    justify-items: center;
+}
+
+footer{
+    grid-area: foot;
+    background-color: #323b3e;
+}
+
+.itens{
+    background-color: blue;
+}
+
+#item-1{
+    grid-area: item1;
+}
+
+#item-2{
+    grid-area: item2;
+}
+
+#item-3{
+    grid-area: item3;
+}
+
+#item-4{
+    grid-area: item4;
+}
+
+#item-5{
+    grid-area: item5;
+}
+
+#item-6{
+    grid-area: item6;
+}
+
+#item-7{
+    grid-area: item7;
+}
+
+#item-8{
+    grid-area: item8;
+}
