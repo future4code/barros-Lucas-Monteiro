@@ -1,0 +1,26 @@
+.local{
+  text-align: center;
+  background-color: beige;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h3{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 29px;
+  color: #65868f;
+}
+
+img{
+  width: 350px;
+  border-radius: 10px;
+}
+
+p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: #65868f;
+}
