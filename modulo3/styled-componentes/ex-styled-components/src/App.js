@@ -1,6 +1,7 @@
 import './App.css';
 import { Cabecalho } from './Componentes/Cabecalho';
 import {Estrutura} from "./Componentes/corpo";
+import {Pe} from "./Componentes/Rodape"
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Cabecalho />
       <Estrutura />
+      <Pe />
     </div>
   );
 }

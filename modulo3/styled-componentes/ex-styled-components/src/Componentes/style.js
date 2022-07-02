@@ -6,7 +6,6 @@ export const Cabeca=styled.header`
     height: 10vh;
     text-align: center;
     padding: 0%;
-    border-bottom: 1px solid;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,8 +25,9 @@ export const LogoCabeca=styled.img`
 
 export const Corpo=styled.main`
     margin: 0%;
+    padding-bottom: 3px;
     width: 1100px;
-    height: 80vh;
+    height: 85vh;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -45,4 +45,12 @@ export const TextoFormulario=styled.label`
 export const CaixaMensagem=styled.input`
     width: 350px;
     margin-right: 6px;
+`
+
+export const Rodape=styled.footer`
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    color: black;
+    background-color: #a5a4a5;
 `
